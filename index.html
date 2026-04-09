@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arina Gornushkina — Growth & Content Marketing Manager</title>
+<link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #F5F3EE;
+    --bg2: #EDEAE3;
+    --bg3: #E4E0D7;
+    --text: #1A1916;
+    --text2: #6B6860;
+    --text3: #9E9B94;
+    --border: rgba(26,25,22,0.1);
+    --border2: rgba(26,25,22,0.18);
+    --purple: #6B5FD4;
+    --purple-bg: #EEEDFE;
+    --purple-text: #3C3489;
+    --teal: #1D9E75;
+    --teal-bg: #E1F5EE;
+    --teal-text: #085041;
+    --coral: #D85A30;
+    --coral-bg: #FAECE7;
+    --coral-text: #712B13;
+    --pink: #D4537E;
+    --pink-bg: #FBEAF0;
+    --pink-text: #72243E;
+    --amber: #BA7517;
+    --amber-bg: #FAEEDA;
+    --amber-text: #633806;
+    --blue: #378ADD;
+    --blue-bg: #E6F1FB;
+    --blue-text: #0C447C;
+    --accent: #1A1916;
+    --radius: 12px;
+    --radius-sm: 8px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Geologica', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+  /* NAV */
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: var(--bg); border-bottom: 0.5px solid var(--border); padding: 0 40px; display: flex; align-items: center; justify-content: space-between; height: 56px; }
+  .nav-name { font-size: 13px; font-weight: 500; letter-spacing: .02em; }
+  .nav-links { display: flex; gap: 28px; }
+  .nav-links a { font-size: 12px; color: var(--text2); text-decoration: none; transition: color .2s; }
+  .nav-links a:hover { color: var(--text); }
+  .nav-cta { font-size: 12px; font-weight: 500; background: var(--text); color: var(--bg); padding: 7px 16px; border-radius: 99px; text-decoration: none; transition: opacity .2s; }
+  .nav-cta:hover { opacity: .8; }
+
+  /* SECTIONS */
+  section { padding: 100px 40px 80px; max-width: 960px; margin: 0 auto; }
+  section:first-of-type { padding-top: 140px; }
+
+  /* HERO */
+  .hero-eyebrow { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--text3); letter-spacing: .12em; text-transform: uppercase; margin-bottom: 24px; }
+  .hero-name { font-size: clamp(42px, 7vw, 72px); font-weight: 300; line-height: 1.05; letter-spacing: -.02em; margin-bottom: 32px; }
+  .hero-name em { font-style: normal; font-weight: 600; }
+  .hero-offer { font-size: 16px; color: var(--text2); line-height: 1.75; max-width: 560px; margin-bottom: 40px; padding-left: 18px; border-left: 2px solid var(--border2); }
+  .hero-offer strong { color: var(--text); font-weight: 500; }
+  .hero-units { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; max-width: 560px; margin-bottom: 40px; }
+  .hero-unit { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 14px 16px; }
+  .hero-unit-title { font-size: 13px; font-weight: 500; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .hero-unit-sub { font-size: 11px; color: var(--text3); line-height: 1.5; }
+  .hero-unit-note { font-size: 10px; color: var(--text3); margin-top: 4px; font-style: italic; }
+  .dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+  .d-purple { background: var(--purple); }
+  .d-teal   { background: var(--teal); }
+  .d-coral  { background: var(--coral); }
+  .d-pink   { background: var(--pink); }
+  .d-amber  { background: var(--amber); }
+  .d-blue   { background: var(--blue); }
+  .d-gray   { background: var(--text3); }
+  .cta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 40px; }
+  .btn-primary { font-family: 'Geologica', sans-serif; font-size: 13px; font-weight: 500; padding: 11px 24px; border-radius: 99px; border: none; background: var(--text); color: var(--bg); cursor: pointer; text-decoration: none; transition: opacity .2s; }
+  .btn-primary:hover { opacity: .8; }
+  .btn-secondary { font-family: 'Geologica', sans-serif; font-size: 13px; font-weight: 500; padding: 11px 24px; border-radius: 99px; border: 0.5px solid var(--border2); background: transparent; color: var(--text); cursor: pointer; text-decoration: none; transition: background .2s; }
+  .btn-secondary:hover { background: var(--bg2); }
+  .avail-row { display: flex; align-items: center; gap: 8px; }
+  .avail-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--teal); }
+  .avail-text { font-size: 12px; color: var(--text3); }
+
+  /* DIVIDER */
+  .section-divider { border: none; border-top: 0.5px solid var(--border); max-width: 960px; margin: 0 auto; }
+
+  /* SECTION LABEL */
+  .sec-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: var(--text3); margin-bottom: 32px; }
+
+  /* POSITIONING */
+  .pos-text { font-size: 16px; color: var(--text2); line-height: 1.85; max-width: 600px; margin-bottom: 16px; }
+  .pos-text strong { color: var(--text); font-weight: 500; }
+  .pos-facts { display: flex; gap: 24px; flex-wrap: wrap; margin-top: 28px; padding-top: 20px; border-top: 0.5px solid var(--border); }
+  .pos-fact { font-size: 12px; color: var(--text3); display: flex; align-items: center; gap: 6px; }
+  .pos-fact-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text3); }
+
+  /* COMPETENCIES */
+  .comp-card { border: 0.5px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; }
+  .comp-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 16px 20px; cursor: pointer; background: var(--bg2); gap: 12px; transition: background .15s; }
+  .comp-header:hover { background: var(--bg3); }
+  .comp-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+  .tags { display: flex; gap: 5px; flex-wrap: wrap; }
+  .tag { display: inline-block; font-size: 11px; font-weight: 500; padding: 2px 9px; border-radius: 99px; }
+  .t-purple { background: var(--purple-bg); color: var(--purple-text); }
+  .t-teal   { background: var(--teal-bg); color: var(--teal-text); }
+  .t-coral  { background: var(--coral-bg); color: var(--coral-text); }
+  .t-pink   { background: var(--pink-bg); color: var(--pink-text); }
+  .chevron { font-size: 13px; color: var(--text3); transition: transform .25s; flex-shrink: 0; margin-top: 2px; }
+  .chevron.open { transform: rotate(180deg); }
+  .comp-body { display: none; border-top: 0.5px solid var(--border); padding: 20px; background: #FAFAF7; }
+  .comp-body.open { display: block; }
+  .inner-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin: 16px 0 8px; }
+  .inner-label:first-child { margin-top: 0; }
+  .skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5px 20px; }
+  .skill-item { font-size: 12px; color: var(--text2); line-height: 1.55; padding-left: 12px; position: relative; }
+  .skill-item::before { content: "—"; position: absolute; left: 0; color: var(--text3); }
+  .result-item { font-size: 12px; color: var(--text2); line-height: 1.65; padding-left: 14px; position: relative; margin-bottom: 4px; }
+  .result-item::before { content: "→"; position: absolute; left: 0; color: var(--text3); }
+  .result-num { font-weight: 600; color: var(--text); }
+  .metrics-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+  .m-chip { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 4px 10px; font-size: 11px; color: var(--text2); }
+  .m-chip strong { color: var(--text); font-weight: 500; }
+  .divider-inner { border: none; border-top: 0.5px solid var(--border); margin: 14px 0; }
+  .platforms { display: flex; gap: 5px; flex-wrap: wrap; }
+  .platform { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 99px; border: 0.5px solid var(--border); background: var(--bg2); color: var(--text2); }
+  .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .team-chip { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 10px; }
+  .team-role { font-size: 11px; font-weight: 500; color: var(--text); }
+  .team-count { font-size: 11px; color: var(--text3); }
+  .case-block { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 8px; }
+  .case-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-bottom: 6px; }
+  .case-text { font-size: 12px; color: var(--text2); line-height: 1.7; }
+  .case-text strong { color: var(--text); font-weight: 500; }
+
+  /* KEY NUMBERS */
+  .numbers-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .number-card { background: var(--bg2); border: 0.5px solid var(--border); border-radius: var(--radius); padding: 20px 16px; }
+  .number-val { font-size: 28px; font-weight: 600; color: var(--text); letter-spacing: -.02em; line-height: 1; margin-bottom: 6px; }
+  .number-label { font-size: 11px; color: var(--text3); line-height: 1.4; }
+
+  /* CASES */
+  .case-card { border: 0.5px solid var(--border); border-radius: var(--radius); margin-bottom: 8px; overflow: hidden; }
+  .case-header { display: flex; align-items: flex-start; justify-content: space-between; padding: 18px 20px; cursor: pointer; background: var(--bg2); gap: 12px; transition: background .15s; }
+  .case-header:hover { background: var(--bg3); }
+  .case-title { font-size: 14px; font-weight: 500; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+  .case-meta { font-size: 11px; color: var(--text3); margin-bottom: 8px; }
+  .case-body { display: none; border-top: 0.5px solid var(--border); padding: 20px; background: #FAFAF7; }
+  .case-body.open { display: block; }
+  .case-metrics { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .metric { background: var(--bg); border: 0.5px solid var(--border); border-radius: var(--radius-sm); padding: 8px 12px; font-size: 12px; color: var(--text2); }
+  .metric strong { color: var(--text); font-weight: 600; display: block; font-size: 16px; }
+
+  /* STACK */
+  .stack-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .stack-card { border: 0.5px solid var(--border); border-radius: var(--radius); padding: 16px 18px; background: var(--bg2); }
+  .stack-title { font-size: 12px; font-weight: 500; margin-bottom: 10px; display: flex; align-items: center; gap: 7px; }
+  .pills { display: flex; flex-wrap: wrap; gap: 5px; }
+  .pill { display: inline-block; font-size: 11px; padding: 3px 9px; border-radius: 99px; border: 0.5px solid var(--border); background: var(--bg); color: var(--text2); }
+  .pill-ai { background: var(--blue-bg); color: var(--blue-text); border-color: #B5D4F4; }
+
+  /* CONTACT */
+  .contact-tagline { font-size: clamp(28px, 5vw, 48px); font-weight: 300; line-height: 1.15; letter-spacing: -.02em; margin-bottom: 16px; }
+  .contact-sub { font-size: 14px; color: var(--text2); margin-bottom: 32px; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; max-width: 500px; margin-bottom: 28px; }
+  .contact-card { border: 0.5px solid var(--border); border-radius: var(--radius); padding: 16px 18px; background: var(--bg2); }
+  .contact-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: var(--text3); margin-bottom: 5px; }
+  .contact-value { font-size: 13px; font-weight: 500; color: var(--text); }
+  .contact-hint { font-size: 11px; color: var(--text3); margin-top: 3px; }
+  .footer-facts { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 32px; padding-top: 24px; border-top: 0.5px solid var(--border); }
+  .footer-fact { font-size: 12px; color: var(--text3); display: flex; align-items: center; gap: 6px; }
+  .ff-dot { width: 5px; height: 5px; border-radius: 50%; }
+  .ff-green { background: var(--teal); }
+  .ff-gray  { background: var(--text3); }
+
+  @media (max-width: 680px) {
+    nav { padding: 0 20px; }
+    .nav-links { display: none; }
+    section { padding: 80px 20px 60px; }
+    section:first-of-type { padding-top: 100px; }
+    .hero-units { grid-template-columns: 1fr; }
+    .numbers-grid { grid-template-columns: repeat(2, 1fr); }
+    .skill-grid { grid-template-columns: 1fr; }
+    .stack-grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; }
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <span class="nav-name">Arina Gornushkina</span>
+  <div class="nav-links">
+    <a href="#about">О себе</a>
+    <a href="#competencies">Компетенции</a>
+    <a href="#cases">Кейсы</a>
+    <a href="#stack">Стек</a>
+  </div>
+  <a href="https://t.me/ari_gorr" class="nav-cta">Написать</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-eyebrow">Portfolio · 2026</div>
+  <h1 class="hero-name">Growth & Content<br><em>Marketing Manager</em></h1>
+  <div class="hero-offer">
+    9 лет в digital-продуктах. Строю маркетинговые системы полного цикла —
+    от привлечения и лидогенерации до удержания и <strong>роста выручки</strong>.
+    Работаю на стыке <strong>product, growth и контента</strong>.
+  </div>
+  <div class="hero-units">
+    <div class="hero-unit">
+      <div class="hero-unit-title"><span class="dot d-purple"></span>Growth marketing</div>
+      <div class="hero-unit-sub">Воронки · лидогенерация · GTM · A/B · SEO</div>
+      <div class="hero-unit-note">включая performance-каналы и бюджеты</div>
+    </div>
+    <div class="hero-unit">
+      <div class="hero-unit-title"><span class="dot d-teal"></span>Content & editorial</div>
+      <div class="hero-unit-sub">Стратегия · органика · дистрибуция · соцсети</div>
+    </div>
+    <div class="hero-unit">
+      <div class="hero-unit-title"><span class="dot d-coral"></span>CRM & lifecycle</div>
+      <div class="hero-unit-sub">Сегментация · цепочки · реактивация · retention</div>
+    </div>
+    <div class="hero-unit">
+      <div class="hero-unit-title"><span class="dot d-pink"></span>Team & operations</div>
+      <div class="hero-unit-sub">Команда 10+ · KPI · процессы · маркетинг с нуля</div>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a href="https://t.me/ari_gorr" class="btn-primary">Написать в Telegram</a>
+    <a href="mailto:arinagornushkina@gmail.com" class="btn-secondary">Отправить email</a>
+  </div>
+  <div class="avail-row">
+    <span class="avail-dot"></span>
+    <span class="avail-text">Открыта к офферам · удалёнка · Испания · EN B2</span>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="sec-label">О себе</div>
+  <p class="pos-text">Marketing manager с <strong>9-летним опытом в digital</strong>. Работала с EdTech, e-commerce, gaming и B2B — строила маркетинг на разных стадиях: от запуска до масштабирования.</p>
+  <p class="pos-text">Специализация — <strong>полный цикл: привлечение, активация, удержание</strong>. Строю процессы, где каждый канал работает на результат для бизнеса. Работаю руками — хэндс-он с маркетинговыми инструментами.</p>
+  <p class="pos-text">Принимаю решения на основе данных: <strong>CPL, ROAS, LTV, unit-экономика</strong>. Использую AI в работе — генерация контента, визуал, построение процессов.</p>
+  <div class="pos-facts">
+    <div class="pos-fact"><span class="pos-fact-dot"></span>Испания · удалёнка</div>
+    <div class="pos-fact"><span class="pos-fact-dot"></span>RU native · EN B2</div>
+    <div class="pos-fact"><span class="pos-fact-dot"></span>Открыта к офферам</div>
+    <div class="pos-fact"><span class="pos-fact-dot"></span>Готова к командировкам</div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- COMPETENCIES -->
+<section id="competencies">
+  <div class="sec-label">Компетенции</div>
+
+  <!-- Growth -->
+  <div class="comp-card">
+    <div class="comp-header" onclick="toggle(this)">
+      <div>
+        <div class="comp-title"><span class="dot d-purple"></span>Growth marketing</div>
+        <div class="tags">
+          <span class="tag t-purple">Воронки привлечения</span>
+          <span class="tag t-purple">GTM</span>
+          <span class="tag t-purple">A/B тесты</span>
+          <span class="tag t-purple">SEO</span>
+          <span class="tag t-purple">Performance</span>
+          <span class="tag t-purple">Лидогенерация</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="comp-body">
+      <div class="inner-label">Что умею</div>
+      <div class="skill-grid">
+        <div class="skill-item">Построение воронок привлечения — paid + organic</div>
+        <div class="skill-item">Go-to-market стратегии для продуктов и фич</div>
+        <div class="skill-item">A/B тестирование гипотез и приоритизация</div>
+        <div class="skill-item">SEO: структура, семантика, связка с контентом</div>
+        <div class="skill-item">Лидогенерация: чат-боты, лид-магниты, партнёрства</div>
+        <div class="skill-item">Платные каналы: Meta Ads, Google Ads, TG Ads, Яндекс.Директ, VK — до 5 млн ₽/мес</div>
+        <div class="skill-item">Influence-маркетинг и партнёрские проекты</div>
+        <div class="skill-item">Unit-экономика: CPL, CAC, LTV, ROAS, CPA, CTR, DRR</div>
+      </div>
+      <div class="inner-label">Результаты</div>
+      <div class="result-item">ROAS до <span class="result-num">500%</span> в рекламных кампаниях</div>
+      <div class="result-item">Конверсия воронки <span class="result-num">+20%</span> по ключевым этапам</div>
+      <div class="result-item">Лидогенерация <span class="result-num">+20%</span>, выручка кампаний <span class="result-num">+280%</span> при DRR 9%</div>
+      <div class="result-item">CPL снижен на <span class="result-num">15%</span> — до <span class="result-num">$0.10–0.15</span></div>
+      <div class="result-item">Показатель отказов: <span class="result-num">57% → 32%</span> после редизайна страниц</div>
+      <div class="result-item"><span class="result-num">10+</span> партнёрских проектов с BigTech и отраслевыми компаниями</div>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="comp-card">
+    <div class="comp-header" onclick="toggle(this)">
+      <div>
+        <div class="comp-title"><span class="dot d-teal"></span>Content & editorial systems</div>
+        <div class="tags">
+          <span class="tag t-teal">Контент-стратегия</span>
+          <span class="tag t-teal">SEO-контент</span>
+          <span class="tag t-teal">Дистрибуция</span>
+          <span class="tag t-teal">Соцсети</span>
+          <span class="tag t-teal">AI-контент</span>
+          <span class="tag t-teal">Ребрендинг</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="comp-body">
+      <div class="inner-label">Что умею</div>
+      <div class="skill-grid">
+        <div class="skill-item">Контент-стратегия с нуля: TOV, редполитика, медиаплан</div>
+        <div class="skill-item">SEO-контент: кластеризация, семантика, хабы, развитие блога</div>
+        <div class="skill-item">Мультиканальная дистрибуция: 7+ платформ, протестировано 15+ площадок</div>
+        <div class="skill-item">Выстраивание процессов производства: тексты, визуал, видео</div>
+        <div class="skill-item">Сайт: контент, позиционирование, ребрендинг, визуал</div>
+        <div class="skill-item">AI для контента: промпты, генерация, ускорение производства</div>
+      </div>
+      <div class="inner-label">Площадки</div>
+      <div class="platforms">
+        <span class="platform">Telegram</span><span class="platform">Instagram</span><span class="platform">VK</span><span class="platform">TikTok</span><span class="platform">X (Twitter)</span><span class="platform">Хабр</span><span class="platform">VC.ru</span><span class="platform">Дзен</span>
+      </div>
+      <div class="inner-label">Результаты</div>
+      <div class="result-item">Органический трафик <span class="result-num">+63%</span>, SEO-видимость <span class="result-num">+61 п.п.</span> в Яндексе и <span class="result-num">+8.6 п.п.</span> в Google</div>
+      <div class="result-item">Рост лидогенерации <span class="result-num">+20%</span> за счёт органического контента</div>
+      <div class="result-item">Суммарный рост аудитории <span class="result-num">+10K</span> подписчиков/мес на 5 платформах</div>
+      <div class="result-item">Охваты в ключевых каналах <span class="result-num">+40%</span> — Telegram и Instagram</div>
+      <div class="result-item">Контент-кампании с выручкой <span class="result-num">+280%</span> при DRR 9%</div>
+    </div>
+  </div>
+
+  <!-- CRM -->
+  <div class="comp-card">
+    <div class="comp-header" onclick="toggle(this)">
+      <div>
+        <div class="comp-title"><span class="dot d-coral"></span>CRM & lifecycle</div>
+        <div class="tags">
+          <span class="tag t-coral">CJM</span>
+          <span class="tag t-coral">Сегментация</span>
+          <span class="tag t-coral">Email-маркетинг</span>
+          <span class="tag t-coral">App Push</span>
+          <span class="tag t-coral">Bot Push</span>
+          <span class="tag t-coral">Реактивация</span>
+          <span class="tag t-coral">Retention</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="comp-body">
+      <div class="inner-label">Lifecycle & CRM</div>
+      <div class="skill-grid">
+        <div class="skill-item">CJM: проектирование пути пользователя, выявление барьеров и точек роста</div>
+        <div class="skill-item">Сегментация по поведению, RFM, активности и этапу воронки</div>
+        <div class="skill-item">Цепочки коммуникаций: онбординг, активация, удержание, реактивация</div>
+        <div class="skill-item">Win-back кампании и триггеры на бездействие</div>
+        <div class="skill-item">App Push · Bot Push Notification — удержание и вовлечение</div>
+        <div class="skill-item">A/B тестирование: тайминг, оффер, канал, формат — системный подход</div>
+        <div class="skill-item">Аналитика lifecycle: CR, churn, LTV, retention по когортам</div>
+        <div class="skill-item">Инструменты: амоCRM, Битрикс24, SendPulse, Unisender</div>
+      </div>
+      <div class="divider-inner"></div>
+      <div class="inner-label">Email-маркетинг</div>
+      <div class="skill-grid">
+        <div class="skill-item">Написание текстов: продающие, контентные, триггерные письма</div>
+        <div class="skill-item">Вёрстка: адаптивные HTML-шаблоны</div>
+        <div class="skill-item">Сегментация базы и персонализация коммуникаций</div>
+        <div class="skill-item">Аналитика: open rate, CTR, конверсия, отписки</div>
+      </div>
+      <div class="inner-label">Результаты</div>
+      <div class="result-item">CRM-база: <span class="result-num">12K → 35K</span> пользователей</div>
+      <div class="result-item">CTR до <span class="result-num">80%</span> в lifecycle-кампаниях</div>
+      <div class="result-item">Open rate email-кампаний <span class="result-num">20–30%</span> — выше среднего по рынку EdTech</div>
+      <div class="result-item"><span class="result-num">~20%</span> возврата пользователей ежемесячно через Push-каналы</div>
+    </div>
+  </div>
+
+  <!-- Team -->
+  <div class="comp-card">
+    <div class="comp-header" onclick="toggle(this)">
+      <div>
+        <div class="comp-title"><span class="dot d-pink"></span>Team & marketing operations</div>
+        <div class="tags">
+          <span class="tag t-pink">Найм команды</span>
+          <span class="tag t-pink">Команда 10+</span>
+          <span class="tag t-pink">KPI · OKR</span>
+          <span class="tag t-pink">Процессы</span>
+          <span class="tag t-pink">Кросс-функционал</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="comp-body">
+      <div class="inner-label">Состав команды в управлении</div>
+      <div class="team-grid">
+        <div class="team-chip"><div class="team-role">Редакция</div><div class="team-count">3 копирайтера</div></div>
+        <div class="team-chip"><div class="team-role">Дизайн</div><div class="team-count">3 дизайнера</div></div>
+        <div class="team-chip"><div class="team-role">Видеопродакшен</div><div class="team-count">2 монтажёра, 1 продюсер</div></div>
+        <div class="team-chip"><div class="team-role">Маркетинг</div><div class="team-count">операционный маркетолог</div></div>
+        <div class="team-chip"><div class="team-role">Аналитика</div><div class="team-count">маркетолог-аналитик</div></div>
+        <div class="team-chip"><div class="team-role">Подрядчики</div><div class="team-count">постановка и контроль</div></div>
+      </div>
+      <div class="inner-label">Что умею</div>
+      <div class="skill-grid">
+        <div class="skill-item">Найм и онбординг команды с нуля по всем направлениям</div>
+        <div class="skill-item">Внедрение KPI и системы планирования для маркетинга</div>
+        <div class="skill-item">Редакционные процессы: контент-план, чек-листы, инструкции</div>
+        <div class="skill-item">Операционные процессы: планёрки, демо, система задач, отчётность</div>
+        <div class="skill-item">Кросс-функционал: маркетинг ↔ product, design, dev, sales</div>
+        <div class="skill-item">Построение маркетинга с нуля — от стратегии до операций</div>
+      </div>
+      <div class="inner-label">Кейс — Slurm EdTech</div>
+      <div class="case-block"><div class="case-label">Ситуация</div><div class="case-text">Контент выходил хаотично — от <strong>0 до 3 постов в день</strong> без системы. Только продающие посты, нет редполитики и ролей.</div></div>
+      <div class="case-block"><div class="case-label">Что сделала</div><div class="case-text">Набрала редакцию и продакшен с нуля. Внедрила контент-план, чек-листы, систему задач. Ввела <strong>4 типа контента</strong>: экспертный, развлекательный, контентный, продающий.</div></div>
+      <div class="case-block"><div class="case-label">Результат</div><div class="case-text">Стабильный ритм <strong>3–8 публикаций в день</strong>. Команда работает автономно.</div></div>
+      <div class="inner-label">Результаты</div>
+      <div class="result-item">Эффективность команды <span class="result-num">+25%</span> после внедрения KPI</div>
+      <div class="result-item">Команда с нуля: <span class="result-num">10+ человек</span> — редакция, дизайн, видео, аналитика</div>
+      <div class="result-item">Ритм публикаций: хаос → <span class="result-num">3–8 постов/день</span> стабильно</div>
+    </div>
+  </div>
+
+  <!-- Numbers -->
+  <div style="margin-top: 24px;">
+    <div class="inner-label" style="margin-top:0; margin-bottom: 14px;">Ключевые цифры</div>
+    <div class="numbers-grid">
+      <div class="number-card"><div class="number-val">+280%</div><div class="number-label">рост выручки в кампаниях</div></div>
+      <div class="number-card"><div class="number-val">+63%</div><div class="number-label">органический трафик</div></div>
+      <div class="number-card"><div class="number-val">35K</div><div class="number-label">CRM-база пользователей</div></div>
+      <div class="number-card"><div class="number-val">CTR 80%</div><div class="number-label">в lifecycle-кампаниях</div></div>
+      <div class="number-card"><div class="number-val">ROAS 500%</div><div class="number-label">в рекламных кампаниях</div></div>
+      <div class="number-card"><div class="number-val">CPL −15%</div><div class="number-label">до $0.10–0.15</div></div>
+      <div class="number-card"><div class="number-val">+25%</div><div class="number-label">эффективность команды</div></div>
+      <div class="number-card"><div class="number-val">10+</div><div class="number-label">партнёрств с BigTech</div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CASES -->
+<section id="cases">
+  <div class="sec-label">Кейсы</div>
+
+  <div class="case-card">
+    <div class="case-header" onclick="toggleCase(this)">
+      <div>
+        <div class="case-title"><span class="dot d-purple"></span>Slurm — EdTech платформа для IT-специалистов</div>
+        <div class="case-meta">2023–2025 · PMM → Marketing Lead · 2 года</div>
+        <div class="tags">
+          <span class="tag t-purple">Growth</span><span class="tag t-purple">Content</span><span class="tag t-purple">CRM</span><span class="tag t-purple">Team</span><span class="tag t-purple">Full-funnel</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="case-body">
+      <div class="case-block"><div class="case-label">Ситуация</div><div class="case-text">EdTech-платформа с амбициями роста: <strong>мало лидов, высокий CPL, слабый прогрев</strong> в воронках. Комьюнити не работало на удержание, бренд слабо узнаваем.</div></div>
+      <div class="case-block"><div class="case-label">Задача</div><div class="case-text">Как PMM — вывести новые продукты на рынок. Как Lead — <strong>масштабировать маркетинг</strong>: новые точки роста, расширение воронок, команда и процессы.</div></div>
+      <div class="case-block"><div class="case-label">Решение</div><div class="case-text">Сделала ставку на <strong>органический контент как точку касания</strong> — расширила присутствие на 7+ платформах, выстроила единый стиль. Параллельно оптимизировала воронки, масштабировала CRM с нуля, собрала команду 10+ человек.</div></div>
+      <div class="case-block"><div class="case-label">Результат</div><div class="case-text">Полный цикл от привлечения до удержания — с измеримым результатом на каждом этапе.</div></div>
+      <div class="case-metrics">
+        <div class="metric"><strong>+280%</strong>выручка</div>
+        <div class="metric"><strong>+63%</strong>органика</div>
+        <div class="metric"><strong>35K</strong>CRM-база</div>
+        <div class="metric"><strong>+20%</strong>конверсия</div>
+        <div class="metric"><strong>CPL −15%</strong>до $0.10–0.15</div>
+        <div class="metric"><strong>10+</strong>партнёрств</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-header" onclick="toggleCase(this)">
+      <div>
+        <div class="case-title"><span class="dot d-teal"></span>Telegram Mini App — gaming-стартап</div>
+        <div class="case-meta">2026 · CRM & Content Strategist · part-time</div>
+        <div class="tags">
+          <span class="tag t-teal">Стартап</span><span class="tag t-teal">CRM с нуля</span><span class="tag t-teal">Retention</span><span class="tag t-teal">Community</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="case-body">
+      <div class="case-block"><div class="case-label">Ситуация</div><div class="case-text">Стартап на ранней стадии: <strong>не было ничего</strong> — ни контент-системы, ни CRM, ни коммуникаций с пользователями.</div></div>
+      <div class="case-block"><div class="case-label">Задача</div><div class="case-text">Построить <strong>комьюнити и систему коммуникаций с нуля</strong> — с целью возврата и удержания пользователей в приложении.</div></div>
+      <div class="case-block"><div class="case-label">Решение</div><div class="case-text">Запустила Telegram-канал: стратегия, TOV, контент-план. Параллельно — <strong>CJM, сегментация, push-логика</strong> для возврата. A/B тесты форматов и тайминга.</div></div>
+      <div class="case-block"><div class="case-label">Результат</div><div class="case-text">За <strong>2 месяца</strong> выстроена система коммуникаций — один из ключевых каналов возврата пользователей.</div></div>
+      <div class="case-metrics">
+        <div class="metric"><strong>+3K</strong>подп. за 2 мес.</div>
+        <div class="metric"><strong>~20%</strong>возврат через канал</div>
+        <div class="metric"><strong>42%</strong>событий в продукте</div>
+        <div class="metric"><strong>avg 38s</strong>сессия</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="case-card">
+    <div class="case-header" onclick="toggleCase(this)">
+      <div>
+        <div class="case-title"><span class="dot d-coral"></span>Paketico — e-commerce, подарочная упаковка</div>
+        <div class="case-meta">2020–2022 · Brand Manager · B2B + B2C</div>
+        <div class="tags">
+          <span class="tag t-coral">B2B</span><span class="tag t-coral">E-commerce</span><span class="tag t-coral">Бренд с нуля</span><span class="tag t-coral">SMM</span>
+        </div>
+      </div>
+      <span class="chevron">▾</span>
+    </div>
+    <div class="case-body">
+      <div class="case-block"><div class="case-label">Ситуация</div><div class="case-text">E-commerce в нише подарочной упаковки: <strong>слабое присутствие в digital</strong>, нет системного маркетинга, B2B-база не растёт.</div></div>
+      <div class="case-block"><div class="case-label">Задача</div><div class="case-text"><strong>Расширить B2B-базу</strong>, развить бренд. Выстроить маркетинг для двух аудиторий — B2B и B2C.</div></div>
+      <div class="case-block"><div class="case-label">Решение</div><div class="case-text">Выстроила <strong>позиционирование и визуальный стиль</strong> бренда. Запустила SMM-систему. Разработала B2B-презентации и коммуникации. Создала масштабируемую систему контента для 1000+ SKU.</div></div>
+      <div class="case-block"><div class="case-label">Результат</div><div class="case-text">Бренд получил узнаваемость в нише, B2B-база выросла за счёт системной работы.</div></div>
+      <div class="case-metrics">
+        <div class="metric"><strong>120+</strong>B2B клиентов</div>
+        <div class="metric"><strong>+10%</strong>повторные продажи</div>
+        <div class="metric"><strong>−50%</strong>время на контент</div>
+        <div class="metric"><strong>1000+</strong>SKU в системе</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- STACK -->
+<section id="stack">
+  <div class="sec-label">Стек и инструменты</div>
+  <div class="stack-grid">
+    <div class="stack-card">
+      <div class="stack-title"><span class="dot d-blue"></span>AI-инструменты</div>
+      <div class="pills">
+        <span class="pill pill-ai">ChatGPT</span><span class="pill pill-ai">Claude</span><span class="pill pill-ai">Midjourney</span><span class="pill pill-ai">AI-контент</span><span class="pill pill-ai">AI-визуал</span><span class="pill pill-ai">Системные промпты</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-title"><span class="dot d-gray"></span>Аналитика</div>
+      <div class="pills">
+        <span class="pill">Яндекс.Метрика</span><span class="pill">Google Analytics</span><span class="pill">Amplitude</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-title"><span class="dot d-coral"></span>CRM & коммуникации</div>
+      <div class="pills">
+        <span class="pill">амоCRM</span><span class="pill">Битрикс24</span><span class="pill">Mailchimp</span><span class="pill">SendPulse</span><span class="pill">Unisender</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-title"><span class="dot d-amber"></span>Трафик & реклама</div>
+      <div class="pills">
+        <span class="pill">Яндекс.Директ</span><span class="pill">VK Реклама</span><span class="pill">TG Ads</span><span class="pill">Meta Ads</span><span class="pill">Google Ads</span><span class="pill">Influence</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-title"><span class="dot d-teal"></span>Контент & дизайн</div>
+      <div class="pills">
+        <span class="pill">Figma</span><span class="pill">Canva</span><span class="pill">Tilda</span><span class="pill">WordPress</span>
+      </div>
+    </div>
+    <div class="stack-card">
+      <div class="stack-title"><span class="dot d-purple"></span>Процессы & управление</div>
+      <div class="pills">
+        <span class="pill">Notion</span><span class="pill">Confluence</span><span class="pill">Jira</span><span class="pill">Trello</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="sec-label">Контакты</div>
+  <h2 class="contact-tagline">Давайте обсудим<br>ваш проект</h2>
+  <p class="contact-sub">Открыта к офферам — full-time, part-time, проектная занятость. Работаю удалённо, готова к командировкам.</p>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <div class="contact-label">Telegram</div>
+      <div class="contact-value">@ari_gorr</div>
+      <div class="contact-hint">Предпочтительный способ связи</div>
+    </div>
+    <div class="contact-card">
+      <div class="contact-label">Email</div>
+      <div class="contact-value">arinagornushkina@gmail.com</div>
+      <div class="contact-hint">Отвечаю в течение дня</div>
+    </div>
+  </div>
+  <div class="cta-row">
+    <a href="https://t.me/ari_gorr" class="btn-primary">Написать в Telegram</a>
+    <a href="mailto:arinagornushkina@gmail.com" class="btn-secondary">Отправить email</a>
+  </div>
+  <div class="footer-facts">
+    <div class="footer-fact"><span class="ff-dot ff-green"></span>Открыта к офферам</div>
+    <div class="footer-fact"><span class="ff-dot ff-gray"></span>Испания · удалёнка</div>
+    <div class="footer-fact"><span class="ff-dot ff-gray"></span>RU native · EN B2</div>
+    <div class="footer-fact"><span class="ff-dot ff-gray"></span>Готова к командировкам</div>
+  </div>
+</section>
+
+<script>
+function toggle(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.chevron');
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.comp-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.comp-header .chevron').forEach(c => c.classList.remove('open'));
+  if (!isOpen) { body.classList.add('open'); chevron.classList.add('open'); }
+}
+function toggleCase(header) {
+  const body = header.nextElementSibling;
+  const chevron = header.querySelector('.chevron');
+  const isOpen = body.classList.contains('open');
+  document.querySelectorAll('.case-body').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.case-header .chevron').forEach(c => c.classList.remove('open'));
+  if (!isOpen) { body.classList.add('open'); chevron.classList.add('open'); }
+}
+</script>
+</body>
+</html>
